@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="in4">
+            <p><b>Họ và tên:</b> Nguyễn Tuấn Anh</p>
+            <p><b>MSSV:</b> 072206013055</p>
+        </div>
+        <fieldset class="box">
+            <legend>Cung Hoàng Đạo - Can Chi</legend>
+            <div class="input">
+                <input type="number" id="day" placeholder="Ngày" min="1" max="31">
+                /
+                <input type="number" id="month" placeholder="Tháng" min="1" max="12">
+                /
+                <input type="number" id="year" placeholder="Năm" min="1">
+            </div>
+            <div class="btn">
+                <button type="button" onclick="Check()">Tra cứu</button>
+            </div>
+            <fieldset class="kq">
+                <legend>Kết quả</legend>
+                <div id="output">
+                    <p>Nhập thông tin để có kết quả</p>
+                </div>
+            </fieldset>
+        </fieldset>
+
+        <fieldset class="box">
+            <legend>Danh Bạ Người Dùng Ngẫu Nhiên</legend>
+            <button type="button" onclick="user()">Tải danh sách</button>
+            <div id="ds" class="ds"></div>
+        </fieldset>
+        <fieldset class="box">
+            <legend>Đăng Ký Thông Tin Cư Trú</legend>
+            <div class="form">
+                <input type="text" id="hoTen" placeholder="Họ và tên">
+            </div>
+            <div class="form">
+                <input type="text" id="cccd" placeholder="Số CCCD">
+            </div>
+            <div class="form">
+                <input type="text" id="sdt" placeholder="Số điện thoại">
+            </div>
+            <div class="form">
+                <select id="tinh" onchange="chonTinh()">
+                    <option value="">Chọn Tỉnh/Thành phố</option>
+                </select>
+            </div>
+            <div class="form">
+                <select id="xa">
+                    <option value="">Chọn Xã/Phường</option>
+                </select>
+            </div>
+            <div class="btn">
+                <button type="button" onclick="dangKy()">Đăng ký</button>
+            </div>
+            <p id="kqCuTru"></p>
+        </fieldset>
+        <fieldset class="box">
+            <legend>Ứng Dụng Thời Tiết</legend>
+            <div class="input">
+                <input type="text" id="tenTp" placeholder="Nhập tên thành phố">
+                <button type="button" onclick="xemThoiTiet()">Xem thời tiết</button>
+            </div>
+            <div id="weather"></div>
+        </fieldset>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
